@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <iframe class="sticky-navframe" scrolling="no" src="navbar.html"></iframe>
+        <main>
+            <div class="container">
+            <form action="success.html">
+                <fieldset>
+                    <legend>Credit Card details</legend>
+                    <label for="name" class="field-title">CCN :</label>
+                    <input type="text" pattern="\d{16}|(\d{4} ){3}\d{4}" name="CCN" placeholder="XXXX XXXX XXXX XXXX">
+                    <label for="expiry"  class="field-title">Expiry date :</label>
+                    <input type="month" name="expiry">
+                    <label for="amount" class="field-title">Amount to donate :</label>
+                    <input type="number" name="amount" placeholder="$5" min=5>
+                </fieldset>
+                <div style="height: max-content; width: max-content;">
+                    <input type="submit" value="Donate">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+            <footer>
+                ©2021 Aymen Skiken Foundation.
+                 This work is licensed under a Creative Commons Attribution 4.0
+                  International Licence | Terms of Use and Privacy
+            </footer>
+        </main>
+    </body>
+</html>

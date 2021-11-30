@@ -1,0 +1,237 @@
+            main {
+                position:absolute;
+                top:80px;
+                width: 100%;
+                z-index: 0;
+                animation: fade-in 1s ease-out;
+            }
+
+            main::before{
+                z-index: -1;
+                content: ' ';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.6;
+                background-image: url('animals.jpg');
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                background-size: cover;
+            }
+            
+            @keyframes fade-in{
+                0% {opacity:0;}
+                100%{opacity:1;}
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: rgb(155,210,213);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            footer{
+                color:white;
+                font-size: 11px;
+                width:100%;
+                height: 30px;
+                background-color: rgb(56, 52, 52);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .circle{
+                position:absolute;
+                left: -45px;
+                top: -170px;
+                height: 270px;
+                width: 270px;
+                border-radius: 100%;
+                border:solid rgba(255, 255, 255, 0.3) 70px;
+                animation: pulse 10s ease-in-out infinite;
+            }
+
+            @keyframes pulse {
+                50%{
+                    transform : scale(3);
+                    opacity: 0;
+                }
+                100%{
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .site-title{
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                font-size:35;
+                position: absolute;
+                top:0px;
+                left:50px;
+                color:white;
+            }
+
+            .sticky-navframe {
+                border: none;
+                width: 100%;
+                position: sticky;
+                height:70px;
+                top: 0;
+                z-index: 1;
+            }
+            
+            .nav-hr{
+                background:linear-gradient(to right,purple ,rgb(17, 17, 221));
+                height:70px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content:end;
+                overflow: hidden;
+            }
+            
+            .nav-hr a{
+                font-size: 20;
+                text-decoration: none;
+                color:white;
+                border:solid 1px transparent;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-right: 40px;
+                padding-left: 40px;
+                transition: ease-in-out 0.5s;
+            }
+            
+            .nav-hr a:hover{
+                background-color:rgb(97, 97, 212);
+            }
+
+            .header-img{
+                width:100%;
+                height:100%;
+                background-image: url("animals.jpg");
+                background-size: cover;
+                opacity: 0.4;
+            }
+
+            .content{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+
+            .card{
+                border-radius: 30px;
+                font-size:16px;
+                margin: 30px;
+                padding: 25px;
+                box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.466);
+                background:linear-gradient(rgb(196, 221, 238) 40% ,rgb(105, 187, 206))
+            }
+
+            .float-img{
+                float:left;
+                margin:10px;
+                border-radius: 20px;
+            }
+
+            .centered-link{
+                position: relative;
+                left: 20%;
+                text-decoration: none;
+            }
+            
+            /* FORM ELEMENTS */
+
+            .container{
+                height: 100%;
+                min-height: 600px;
+            }
+
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                min-height: 600px;
+            }
+
+            form *{margin: 10px;}
+
+            select{
+                padding-left:10px;
+                padding-right:5px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                border-radius:30px;
+                outline: none;
+                text-align: center;
+            }
+            
+            fieldset{
+                display: grid;
+                grid-template-columns: max-content max-content;
+                background:linear-gradient(rgb(206, 231, 252) 50% ,rgb(144, 193, 226));
+                width: 10px;
+                border-radius:0 20px 0 20px;
+                box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.466);
+                border:none;
+            }
+
+            fieldset * {margin: 10px;}
+            
+            legend{
+                background:linear-gradient(to right,purple 30%,blue);
+                color:white;
+                border-radius:30px;
+                display: flex;
+                align-items:center;
+                height:30px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        input[type=text],input[type=password],
+        input[type=email],input[type=tel],input[type=number]{
+            border:none;
+            border-bottom: solid black 2px;
+            outline: none;
+            transition:ease-in-out 0.5s;
+            width: max-content;
+            padding: 5px;
+            background-color:transparent;
+        }
+        
+        input[type=text]:focus,input[type=password]:focus,
+        input[type=email]:focus,input[type=tel]:focus,input[type=number]:focus{
+            border-bottom-color: rgb(73, 161, 73);
+        }
+        
+        
+        input[type=submit],input[type=reset],button{
+            width: max-content;
+            height: 30px;
+            font-size: 17;
+            font-weight: bold;
+            overflow: hidden;
+            border:solid black 2px;
+            color:rgb(255, 255, 255);
+            background:linear-gradient(to right, purple ,red);
+            transition: ease-in-out 0.5s;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover,input[type=reset]:hover,button:hover{
+            background: linear-gradient(to right,rgb(156, 44, 201) ,rgb(219, 49, 49));
+        }
+        
+        .field-title{
+            font-weight: bold;
+        }
+        
+        
