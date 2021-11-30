@@ -1,11 +1,4 @@
-            main {
-                position:absolute;
-                top:80px;
-                width: 100%;
-                z-index: 0;
-                animation: fade-in 1s ease-out;
-            }
-
+            
             main::before{
                 z-index: -1;
                 content: ' ';
@@ -20,6 +13,14 @@
                 background-repeat: no-repeat;
                 background-position: 50% 0;
                 background-size: cover;
+            }
+            
+            main {
+                position:absolute;
+                top:80px;
+                width: 100%;
+                z-index: 0;
+                animation: fade-in 1s ease-out;
             }
             
             @keyframes fade-in{
@@ -186,6 +187,8 @@
             fieldset * {margin: 10px;}
             
             legend{
+                font-weight: bold;
+                font-size: 17;
                 background:linear-gradient(to right,purple 30%,blue);
                 color:white;
                 border-radius:30px;
@@ -232,6 +235,15 @@
         
         .field-title{
             font-weight: bold;
+        }
+
+        @media screen and (max-width:600px) {
+            .content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         }
         
         
