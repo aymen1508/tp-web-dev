@@ -1,5 +1,4 @@
-            
-            main::before{
+              main::before{
                 z-index: -1;
                 content: ' ';
                 display: block;
@@ -235,15 +234,6 @@
         
         .field-title{
             font-weight: bold;
-        }
-
-        @media screen and (max-width:600px) {
-            .content{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
         }
         
         
